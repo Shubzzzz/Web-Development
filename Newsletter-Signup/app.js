@@ -42,12 +42,12 @@ app.post("/", (req, res) => {
 
     const jsonData = JSON.stringify(data); //turn the above data into string that is in the form of json and this is we are going to send to mailchimp
 
-    const url = "https://us7.api.mailchimp.com/3.0/lists/d0e02212e0"; //"us7" is from the last of api key 
+    const url = "https://us7.api.mailchimp.com/3.0/lists/d012e0"; //"us7" is from the last of api key 
     //for posting we must have url like "POST(chimpApi)/lists(it says that your subscribers list will start from here)/listID(as we can have many list for putting our subscribrs into)"
 
     const options = {
         method: "POST", //most important option which will specify if we want "POST" or "GET"
-        auth: "shubham1:7714baa072fe10aa64ae413a80681378-us7", //auth is the for authetication and it's from the https nodejs docs
+        auth: "shubham1:7714baa072fe10aa80681378-us7", //auth is the for authetication and it's from the https nodejs docs
     }
 
     const request = https.request(url, options, (response) => { //"response" from the mailchimp server //https is from the nodejs docs for requesting POST on mailchimp
@@ -78,10 +78,10 @@ const port = 3000;
 app.listen(process.env.PORT || port, () => { console.log(`Server is running on port ${port}`) }); //process.env.PORT means heroku will choose the port bby themselves
 
 // api key
-// 7714baa072fe10aa64ae413a80681378-us7  //at last we have us7 which is the US server no.7 which randomly appointed to us
+// 7714baa072fe10aaa80681378-us7  //at last we have us7 which is the US server no.7 which randomly appointed to us
 
 // list ID
-// d0e02212e0 //this is gonna help mailchimp identify the list your gonna put your subscribers into
+// d012e0 //this is gonna help mailchimp identify the list your gonna put your subscribers into
 
 //Heroku
 //After deployong your app on heroku, if you made changes then to apply those changes you have to run the following commands:
