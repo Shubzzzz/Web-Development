@@ -21,7 +21,7 @@ app.get("/", (req, res) => { //"res" refers to the response that we'll give to t
 
 app.post("/", (req, res) => {
     const city = req.body.cityName; //grabbing name=cityName in our html document
-    const apiKey = "64749dd427459b9c563c656d8ae3b9b2";
+    const apiKey = "64749427459b9c563c656d8ae3b9b2";
     const unit = "metric";
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=" + unit;
 
